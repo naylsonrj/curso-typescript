@@ -31,6 +31,7 @@ endereco = ["Rua Importante", 1260, "Bloco C"];
 console.log(endereco);
 // enums
 var Cor;
+// enums
 (function (Cor) {
     Cor[Cor["Cinza"] = 0] = "Cinza";
     Cor[Cor["Verde"] = 100] = "Verde";
@@ -116,9 +117,9 @@ console.log(funcionario.baterPonto(9));
 // funcionario = {}
 // Union Types
 var nota = 10;
-console.log("Minha nota \u00E9 " + nota + "!");
+console.log("Minha nota \u00E9 ".concat(nota, "!"));
 nota = '10';
-console.log("Minha nota \u00E9 " + nota + "!");
+console.log("Minha nota \u00E9 ".concat(nota, "!"));
 // nota = true
 // Checando tipos
 var valor = 30;

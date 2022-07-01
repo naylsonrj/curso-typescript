@@ -2,7 +2,7 @@
 var canal = 'Gaveta';
 var inscritos = 610234;
 // canal = inscritos
-console.log("Canal = " + canal);
+console.log("Canal = ".concat(canal));
 // let nome = 'Pedro'
 function soma(a, b) {
     return a + b;
