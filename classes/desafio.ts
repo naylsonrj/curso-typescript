@@ -14,7 +14,7 @@ class Moto {
         this.velocidade = this.velocidade + delta
     }
 }
- 
+
 const moto = new Moto('Ducati')
 moto.buzinar()
 console.log(moto.velocidade)
@@ -24,7 +24,6 @@ console.log(moto.velocidade)
 // Exercício 2 - Herança
 abstract class Objeto2D {
     constructor(public base: number = 0, public altura: number = 0) {
-
     }
 
     abstract area(): number
@@ -48,7 +47,7 @@ class Estagiario {
     get primeiroNome() {
         return this._primeiroNome
     }
-
+    
     set primeiroNome(valor) {
         if (valor.length >= 3) {
             this._primeiroNome = valor
@@ -58,7 +57,7 @@ class Estagiario {
     }
 }
 
-const estagiario = new Estagiario 
+const estagiario = new Estagiario
 console.log(estagiario.primeiroNome)
 estagiario.primeiroNome = 'Le'
 console.log(estagiario.primeiroNome)

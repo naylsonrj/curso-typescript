@@ -1,6 +1,6 @@
 "use strict";
 // let & const
-var seraQuePode = '?';
+let seraQuePode = '?';
 console.log(seraQuePode);
 let estaFrio = true;
 if (estaFrio) {
@@ -10,7 +10,7 @@ if (estaFrio) {
 const cpf = '123.456.000-99';
 // cpf = '789.101.132-78'
 console.log(cpf);
-var segredo = "externo!";
+var segredo = 'externo!';
 function revelar() {
     const segredo = 'interno';
     console.log(segredo);
@@ -63,7 +63,7 @@ function contagemRegressiva(inicio = 5, fim = inicio - 5) {
     console.log("Fim!");
 }
 contagemRegressiva();
-contagemRegressiva(5);
+contagemRegressiva(3);
 // Rest & Spread
 const numbers = [1, 10, 99, -5, 200, 1034];
 console.log(Math.max(...numbers));
@@ -112,8 +112,8 @@ console.log(p);
 console.log(w);
 const usuarioID = 'SuporteCod3r';
 const notificacoes = '19';
-// const boasVindas = 'Boas vindas ' + usuarioID + 
-//      'Notificações: ' + notificacoes
+// const boasVindas = 'Boas vindas ' + usuarioID +
+//     'Notificações: ' + notificacoes
 const boasVindas = `
 Boas vindas ${usuarioID},
 Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}
@@ -149,28 +149,28 @@ const cientista = { primeiroNome: 'Will', expeciencia: 12 };
 const { primeiroNome, expeciencia } = cientista;
 console.log(primeiroNome, expeciencia);
 // Callback
-function esperar3s(callback) {
-    setTimeout(() => {
-        callback('3s depois...');
-    }, 3000);
-}
-esperar3s(function (resultado) {
-    console.log(resultado);
-});
-function esperar3sPromise() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve('3s depois promie...');
-        }, 3000);
-    });
-}
-esperar3sPromise()
-    .then(dado => console.log(dado));
-fetch('https://swapi.dev/api/people/1')
-    .then(res => res.json())
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(resFilm => resFilm.json())
-    .then(filme => console.log(filme.title))
-    .catch(err => console.log('Catch!!!!' + err));
+// function esperar3s(callback: (dado: string) => void) {
+//     setTimeout(() => {
+//         callback('3s depois...')
+//     }, 3000)
+// }
+// esperar3s(function(resultado: string) {
+//     console.log(resultado)
+// })
+// function esperar3sPromise() {
+//     return new Promise((resolve: any) => {
+//         setTimeout(() => {
+//             resolve('3s depois promise...')
+//         }, 3000)
+//     })
+// }
+// // esperar3sPromise()
+// //     .then(dado => console.log(dado))
+// fetch('https://swapi.co/api/people/1')
+//     .then(res => res.json())
+//     .then(personagem => personagem.films)
+//     .then(films => fetch(films[0]))
+//     .then(resFilm => resFilm.json())
+//     .then(filme => console.log(filme.title))
+//     .catch(err => console.log('Catch!!!!' + err))
 //# sourceMappingURL=ecmascript.js.map

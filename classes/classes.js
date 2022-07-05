@@ -31,7 +31,7 @@ console.log(casamentoEsperto);
 // Atributos: nome, preco e desconto
 // Criar o construtor
 // Obs 1.: Desconto é opcional (valor padrão 0)
-// Obs.: Criar dois produtos: passando dois e três params
+// Obs 2.: Criar dois produtos: passando dois e três params
 class Produto {
     constructor(nome, preco, desconto = 0) {
         this.nome = nome;
@@ -183,7 +183,7 @@ class Aviao {
     }
 }
 const turboHelice = new Aviao('Tu-114', 'PT-ABC');
-// turoHelice.modelo = 'DC-8'
-// turoHelice.prefixo = PT-DEF'
+// turboHelice.modelo = 'DC-8'
+// turboHelice.prefixo = 'PT-DEF'
 console.log(turboHelice);
 //# sourceMappingURL=classes.js.map

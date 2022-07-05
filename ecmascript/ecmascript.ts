@@ -1,5 +1,5 @@
 // let & const
-var seraQuePode = '?'
+let seraQuePode = '?'
 console.log(seraQuePode)
 
 let estaFrio = true
@@ -12,7 +12,7 @@ const cpf: string = '123.456.000-99'
 // cpf = '789.101.132-78'
 console.log(cpf)
 
-var segredo = "externo!"
+var segredo = 'externo!'
 function revelar() {
     const segredo = 'interno'
     console.log(segredo)
@@ -27,7 +27,7 @@ console.log(segredo)
     }
 }
 
-for (let i = 0; i < 10; i++) {
+for(let i = 0; i < 10; i++) {
     console.log(i)
 }
 // console.log(i)
@@ -69,7 +69,7 @@ falarCom('João')
 
 // Parâmetros padrão
 function contagemRegressiva(inicio: number = 5,
-    fim: number = inicio -5): void {
+    fim: number = inicio - 5): void {
     console.log(inicio)
     while(inicio > fim) {
         inicio--
@@ -79,7 +79,7 @@ function contagemRegressiva(inicio: number = 5,
 }
 
 contagemRegressiva()
-contagemRegressiva(5)
+contagemRegressiva(3)
 
 // Rest & Spread
 const numbers = [1, 10, 99, -5, 200, 1034]
@@ -137,21 +137,21 @@ const precoItem = item.preco
 console.log(nomeItem)
 console.log(precoItem)
 
-const { nome:n, preco: p, caracteristicas: { w } } = item
+const { nome: n, preco: p, caracteristicas: { w } } = item
 console.log(n)
 console.log(p)
 console.log(w)
 
 const usuarioID: string = 'SuporteCod3r'
 const notificacoes: string = '19'
-// const boasVindas = 'Boas vindas ' + usuarioID + 
-//      'Notificações: ' + notificacoes
+// const boasVindas = 'Boas vindas ' + usuarioID +
+//     'Notificações: ' + notificacoes
 const boasVindas = `
 Boas vindas ${usuarioID},
 Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}
 `
 console.log(boasVindas)
-console.log(`${(1+1) * 30}`)
+console.log(`${(1 + 1) * 30}`)
 console.log(`Motor: ${caracteristicas[0]}`)
 
 // Desafios
@@ -185,36 +185,36 @@ console.log(nota1, nota2, nota3)
 
 // Exercicio 6
 const cientista = { primeiroNome: 'Will', expeciencia: 12 }
-const {primeiroNome, expeciencia} = cientista
+const { primeiroNome, expeciencia } = cientista
 console.log(primeiroNome, expeciencia)
 
 // Callback
 
-function esperar3s(callback: (dados: string) => void) {
-    setTimeout(() => {
-        callback('3s depois...')
-    }, 3000)
-}
+// function esperar3s(callback: (dado: string) => void) {
+//     setTimeout(() => {
+//         callback('3s depois...')
+//     }, 3000)
+// }
 
-esperar3s(function(resultado: string) {
-    console.log(resultado)
-})
+// esperar3s(function(resultado: string) {
+//     console.log(resultado)
+// })
 
-function esperar3sPromise() {
-    return new Promise((resolve: any) => {
-        setTimeout(() => {
-            resolve('3s depois promie...')
-        }, 3000)
-    })
-}
+// function esperar3sPromise() {
+//     return new Promise((resolve: any) => {
+//         setTimeout(() => {
+//             resolve('3s depois promise...')
+//         }, 3000)
+//     })
+// }
 
-esperar3sPromise()
-    .then(dado => console.log(dado))
+// // esperar3sPromise()
+// //     .then(dado => console.log(dado))
 
-fetch('https://swapi.dev/api/people/1')
-    .then(res => res.json())
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(resFilm => resFilm.json())
-    .then(filme => console.log(filme.title))
-    .catch(err => console.log('Catch!!!!' + err))
+// fetch('https://swapi.co/api/people/1')
+//     .then(res => res.json())
+//     .then(personagem => personagem.films)
+//     .then(films => fetch(films[0]))
+//     .then(resFilm => resFilm.json())
+//     .then(filme => console.log(filme.title))
+//     .catch(err => console.log('Catch!!!!' + err))
